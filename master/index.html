@@ -32,6 +32,14 @@
 </head>
 <body>
     <div class="title">餐馆首页</div>
-    <input class="inputSearch" placeholder="请输入餐馆名称" type="text" name="">
+    <input id="inputSearch" class="inputSearch" placeholder="请输入餐馆名称" type="text" name="">
+    <script type="text/javascript">
+        $("#inputSearch").keypress(function(event) {
+            if(event.keyCode==13){
+                 alert($("#inputSearch").val())
+            }
+
+        });
+    </script>
 </body>
 </html>
