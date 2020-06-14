@@ -34,10 +34,8 @@
     <div class="title">餐馆首页</div>
     <input id="inputSearch" class="inputSearch" placeholder="请输入餐馆名称" type="search" name="">
     <script type="text/javascript">
-        $("#inputSearch").keypress(function(event) {
-            if(event.keyCode==13||event.charCode==13){
-                 alert($("#inputSearch").val())
-            }
+        $("#inputSearch").blur(function(event) {
+            alert($("#inputSearch").val())
 
         });
     </script>
