@@ -34,10 +34,10 @@
     <div class="title">餐馆首页</div>
     <input id="inputSearch" class="inputSearch" placeholder="请输入餐馆名称" type="search" name="">
     <script type="text/javascript">
-        $("#inputSearch").blur(function(event) {
-            alert("Code"+event.keyCode||event.charCode)
-            alert("blur事件---"+$("#inputSearch").val())
-
+        $("#inputSearch").keypress(function(event) {
+            alert("keyCode"+event.keyCode)
+            alert("charCode"+event.charCode)
+            alert("keypress事件---"+$("#inputSearch").val())
         });
 
     </script>
