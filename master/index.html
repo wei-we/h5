@@ -32,12 +32,21 @@
 </head>
 <body>
     <div class="title">餐馆首页</div>
-    <input id="inputSearch" class="inputSearch" placeholder="请输入餐馆名称" type="search" name="">
+    <form action="#" οnsubmit="return false;">
+        <input type="text" style="display:none;"/>
+        <input id="inputSearch" class="inputSearch" placeholder="请输入餐馆名称" type="search" name="inputSearch" />
+    </form>
+
     <script type="text/javascript">
-        $("#inputSearch").keypress(function(event) {
-            alert("keyCode"+event.keyCode)
-            alert("charCode"+event.charCode)
-            alert("keypress事件---"+$("#inputSearch").val())
+        $("#inputSearch").keydown(function(event) {
+            // alert("keyCode"+event.keyCode)
+            // alert("charCode"+event.charCode)
+
+            if(event.keyCode==13||event.charCode==13){
+                alert("keydown事件---"+$("#inputSearch").val())
+                event.preventDefault();
+            }
+
         });
 
     </script>
